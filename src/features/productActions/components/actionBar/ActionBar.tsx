@@ -1,9 +1,9 @@
 import React from 'react';
 import { Stack } from '@mui/material';
-import BackButton from '../actionButtons/backButton/backButton';
-import BuyButton from '../actionButtons/buyButton/buyButton';
-import DislikeButton from '../actionButtons/dislikeButton/dislikeButton';
-import SaveButton from '../actionButtons/saveButton/saveButton';
+import BackButton from '../actionButtons/backButton/BackButton';
+import BuyButton from '../actionButtons/buyButton/BuyButton';
+import DislikeButton from '../actionButtons/dislikeButton/DislikeButton';
+import SaveButton from '../actionButtons/saveButton/SaveButton';
 
 const ActionBar: React.FC = () => {
     return (

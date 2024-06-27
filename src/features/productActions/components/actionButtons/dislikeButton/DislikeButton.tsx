@@ -1,5 +1,5 @@
 import React from 'react';
-import GenericActionButton from '../../common/genericActionButton/genericActionButton';
+import GenericActionButton from '../../../../../common/genericActionButton/GenericActionButton';
 import NotInterestedTwoToneIcon from '@mui/icons-material/NotInterestedTwoTone';
 
 const DislikeButton: React.FC = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from "@mui/material";
-import ActionBar from "../actionBar/actionBar";
+import ActionBar from "../actionBar/ActionBar";
 
 const ProductCard:React.FC = () => {
     return(
