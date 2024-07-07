@@ -1,13 +1,11 @@
 import React from 'react';
 import GenericActionButton from '../../../common/genericActionButton/GenericActionButton';
 import NotInterestedTwoToneIcon from '@mui/icons-material/NotInterestedTwoTone';
+import { goToNextProduct } from '../../../services/ProductService';
 
 const DislikeButton: React.FC = () => {
-    const goToNextItem = () => {
-        alert('Disliked and going to next');
-    }
     return (
-        <GenericActionButton ariaLabel='Dislike button' action={goToNextItem}>
+        <GenericActionButton ariaLabel='Dislike button' action={goToNextProduct}>
             <NotInterestedTwoToneIcon />
         </GenericActionButton>
     )
