@@ -7,7 +7,7 @@ import SaveButton from '../actionButtons/saveButton/SaveButton';
 
 const ActionBar: React.FC = () => {
     return (
-        <Stack direction="row" spacing={2}>
+        <Stack bgcolor="blue"  direction="row" spacing={2} justifyContent="center">
             <BackButton />
             <BuyButton />
             <DislikeButton />

@@ -1,8 +1,5 @@
 import { Container, CssBaseline } from '@mui/material';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import ProductCard from './features/productActions/components/productCard/ProductCard';
+import ProductCard from './features/productCard/components/productCard/ProductCard';
 
 function App() {
 
