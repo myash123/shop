@@ -1,9 +1,9 @@
-import { Container } from '@mui/material';
+import { Box } from '@mui/material';
 import { getProducts } from '../../services/ProductService';
-import { ProductInterface } from '../../../../interfaces/ProductInterface';
+import { ProductInterface } from '../../interfaces/ProductInterface';
 import { useEffect, useState } from 'react';
 
-const ProductImage = () => {
+const ProductDisplay = () => {
     const [products, setProducts] = useState<ProductInterface[]>([]);
     useEffect(() => {
         const fetchedProducts = getProducts()
@@ -12,14 +12,14 @@ const ProductImage = () => {
     }, []);
 
     return (
-    <Container>
+    <Box display="flex" flexDirection="column" alignItems="center">
         {products.length > 0 ? (
-            <img src={products[0].imageSrc} alt="Product image" />
+            <img src={products[1].imageSrc} alt="Product image" width="500px"/>
         ) : (
             <p>No product images available.</p>
         )}
-    </Container>
+    </Box>
     );
 }
 
-export default ProductImage
+export default ProductDisplay

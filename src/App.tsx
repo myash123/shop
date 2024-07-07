@@ -1,5 +1,5 @@
 import { Container, CssBaseline } from '@mui/material';
-import ProductCard from './features/productCard/components/productCard/ProductCard';
+import ProductCard from './features/productCard/ProductCard';
 
 function App() {
 

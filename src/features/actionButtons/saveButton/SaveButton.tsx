@@ -1,5 +1,5 @@
 import React from 'react';
-import GenericActionButton from '../../../../../common/genericActionButton/GenericActionButton';
+import GenericActionButton from '../../../common/genericActionButton/GenericActionButton';
 import StarRateTwoToneIcon from '@mui/icons-material/StarRateTwoTone';
 
 const SaveButton: React.FC = () => {

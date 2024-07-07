@@ -1,5 +1,5 @@
 import React from 'react';
-import GenericActionButton from '../../../../../common/genericActionButton/GenericActionButton';
+import GenericActionButton from '../../../common/genericActionButton/GenericActionButton';
 import ShoppingCartTwoToneIcon from '@mui/icons-material/ShoppingCartTwoTone';
 
 const BuyButton: React.FC = () => {
