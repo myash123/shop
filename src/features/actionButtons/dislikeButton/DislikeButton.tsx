@@ -1,15 +1,15 @@
 import React from 'react';
 import GenericActionButton from '../../../common/genericActionButton/GenericActionButton';
 import NotInterestedTwoToneIcon from '@mui/icons-material/NotInterestedTwoTone';
-import { goToNextProduct } from '../../../services/ProductService';
-import { ProductListInterface } from '../../../interfaces/ProductInterface';
 
-const DislikeButton: React.FC<ProductListInterface> = ({ productList, index }) => {
+interface DislikeButtonProps {
+    updateProductIndex: () => void;
+}
+
+const DislikeButton: React.FC<DislikeButtonProps> = ({ updateProductIndex }) => {
+    
     const handleDislike = () => {
-        const nextProduct = goToNextProduct(productList, index);
-        if (nextProduct) {
-            alert(nextProduct);
-        }
+        updateProductIndex();
     };
 
     return (
