@@ -6,6 +6,6 @@
     }
 
     export interface ProductListInterface{
-        products: ProductInterface[],
-        index?: number,
+        productList: ProductInterface[],
+        index: number,
     }

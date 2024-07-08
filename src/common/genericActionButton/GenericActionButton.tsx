@@ -4,7 +4,7 @@ import { IconButton } from '@mui/material';
 interface GenericActionButtonProps {
     ariaLabel: string; 
     children?: React.ReactNode;
-    action: () => void;
+    action: ( products: any ) => void;
   }
   
 const GenericActionButton:React.FC<GenericActionButtonProps> = ({ ariaLabel, children, action }) => {

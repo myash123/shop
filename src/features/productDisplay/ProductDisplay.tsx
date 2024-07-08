@@ -1,12 +1,12 @@
 import { Box } from '@mui/material';
-import { ProductListInterface } from '../../interfaces/ProductInterface';
+import { ProductInterface } from '../../interfaces/ProductInterface';
 import React from 'react';
 
-const ProductDisplay: React.FC<ProductListInterface> = ({ products }) => {
+const ProductDisplay: React.FC<{ product: ProductInterface | null }> = ({ product }) => {
     return (
         <Box display="flex" flexDirection="column" alignItems="center">
-            {products.length > 0 ? (
-                <img src={products[1].imageSrc} alt="Product image" width="500px"/>
+            {product ? (
+                <img src={product.imageSrc} alt="Product image" width="500px"/>
             ) : (
                 <p>No product images available.</p>
             )}

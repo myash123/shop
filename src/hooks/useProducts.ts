@@ -1,23 +1,13 @@
 import { useState, useEffect } from "react";
-import { ProductInterface } from "../interfaces/ProductInterface";
+import { ProductInterface, ProductListInterface } from "../interfaces/ProductInterface";
 import { getProducts } from "../services/ProductService";
 
 export const useProducts = () => {
-    const [products, setProducts] = useState<ProductInterface[]>([]);
+    const [productList, setProductList] = useState<ProductListInterface>({ productList: [], index: 0});
     useEffect(() => {
-        const fetchedProducts = getProducts()
-        setProducts(fetchedProducts);
+        const fetchedProducts: ProductInterface[] = getProducts()
+        setProductList({ productList: fetchedProducts, index: 0 });
     }, []);
-    return products
-}
-
-export const useCardIndex = () => {
-    const [cardIndex, setCardIndex] = useState(0);
-
-    const incrementIndex = () => {
-        setCardIndex(currentIndex => currentIndex + 1);
-    };
-
-    return { cardIndex, incrementIndex };
-}
+    return productList;
+};
 

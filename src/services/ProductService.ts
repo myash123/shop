@@ -5,8 +5,9 @@ export const getProducts = () => {
     return products;
 }
 
-export const goToNextProduct = (productList: ProductListInterface, index: number) => {
-    if(index + 1 < productList.products.length) {
-        return productList.products[index + 1]
+export const goToNextProduct = (products: ProductListInterface['products'], index: number) => {
+    if (index + 1 < products.length) {
+        return products[index + 1];
     }
+    return null;
 }
