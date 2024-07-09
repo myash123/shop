@@ -10,7 +10,7 @@
         return (
             <Box width="500px">
                 <Stack bgcolor="blue" direction="row" spacing={2} justifyContent="center">
-                    <BackButton productList={productList} index={index}/>
+                    <BackButton updateProductIndex={updateProductIndex}/>
                     <BuyButton productList={productList} index={index}/>
                     <DislikeButton updateProductIndex={updateProductIndex}/>
                     <SaveButton productList={productList} index={index} updateProductIndex={updateProductIndex}/>
