@@ -8,5 +8,5 @@ export interface ProductInterface {
 export interface ProductListInterface{
     productList: ProductInterface[],
     index: number,
-    updateProductIndex?: () => void,
+    updateProductIndex?: (shiftValue: number) => void,
 }

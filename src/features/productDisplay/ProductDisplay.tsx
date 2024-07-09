@@ -4,7 +4,7 @@ import React from 'react';
 
 const ProductDisplay: React.FC<{ product: ProductInterface | null }> = ({ product }) => {
     return (
-        <Box display="flex" flexDirection="column" alignItems="center">
+        <Box height="600px" display="flex" flexDirection="column" alignItems="center">
             {product ? (
                 <img src={product.imageSrc} alt="Product image" width="500px"/>
             ) : (

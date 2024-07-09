@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ProductInterface, ProductListInterface } from "../interfaces/ProductInterface";
 import { getProducts } from "../services/ProductService";
-import { goToNextProduct } from "../services/ProductService";
+import { shiftCurrentProduct } from "../services/ProductService";
 
 export const useProducts = () => {
     const [productList, setProductList] = useState<ProductListInterface>({ productList: [], index: 0 });
@@ -11,10 +11,10 @@ export const useProducts = () => {
         setProductList({ productList: fetchedProducts, index: 0 });
     }, []);
 
-    const updateProductIndex = () => {
+    const updateProductIndex = (shiftValue: number) => {
         setProductList(prevState => {
-            const nextIndex = goToNextProduct(prevState.productList, prevState.index);
-            return { ...prevState, index: nextIndex };
+            const newIndex = shiftCurrentProduct(prevState.productList, prevState.index, shiftValue);
+            return { ...prevState, index: newIndex };
         });
     };
 

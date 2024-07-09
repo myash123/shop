@@ -3,13 +3,13 @@ import GenericActionButton from '../../../common/genericActionButton/GenericActi
 import NotInterestedTwoToneIcon from '@mui/icons-material/NotInterestedTwoTone';
 
 interface DislikeButtonProps {
-    updateProductIndex: () => void;
+    updateProductIndex: (shiftValue: number) => void;
 }
 
 const DislikeButton: React.FC<DislikeButtonProps> = ({ updateProductIndex }) => {
     
     const handleDislike = () => {
-        updateProductIndex();
+        updateProductIndex(1);
     };
 
     return (

@@ -5,7 +5,12 @@ export const getProducts = () => {
     return products;
 }
 
-export const goToNextProduct = (productList: ProductInterface[], index: number): number => {
-    const nextIndex = index + 1 < productList.length ? index + 1 : index;
-    return nextIndex;
+export const shiftCurrentProduct = (productList: ProductInterface[], index: number, shiftValue: number): number => {
+    if (shiftValue && index + 1 < productList.length) {
+        return index + 1;
+    } else if (shiftValue === -1 && index - 1 > productList.length) {
+        return index - 1;
+    } else {
+        return 0;
+    }
 }
